@@ -1,14 +1,29 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, CSSProperties } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import styles from "./index.module.css";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
+
 
 export default function Home() {
   const [storyInput, setStoryInput] = useState("");
   const [result, setResult] = useState();
 
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
+
   async function onSubmit(event) {
     event.preventDefault();
     try {
+
+      setLoading(true);
+      setResult("");
+
       const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
@@ -16,6 +31,7 @@ export default function Home() {
         },
         body: JSON.stringify({ story: storyInput }),
       });
+      setLoading(false);
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -23,7 +39,6 @@ export default function Home() {
       }
 
       setResult(data.result);
-      setStoryInput("");
     } catch(error) {
       console.error(error);
       alert(error.message);
@@ -37,9 +52,10 @@ export default function Home() {
         <link rel="icon" href="/dog.png" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={styles.main} >
         <img src="/Thyra.jpg" className={styles.icon} />
         <h3>Dronning Thyra</h3>
+        Fortæl mig en historie om:
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -48,9 +64,23 @@ export default function Home() {
             value={storyInput}
             onChange={(e) => setStoryInput(e.target.value)}
           />
-          <input type="submit" value="fortæl mig en historie" />
+          
+          <input type="submit" value="Fortæl" />
         </form>
-        <div className={styles.result}>{result}</div>
+
+
+
+        <div className="sweet-loading">
+        <ClipLoader
+        color={color}
+        loading={loading}
+        cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+          
+          {result}</div>
       </main>
     </div>
   );

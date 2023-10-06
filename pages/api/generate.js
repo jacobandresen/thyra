@@ -29,7 +29,6 @@ export default async function (req, res) {
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
-    // Consider adjusting the error handling logic for your use case
     if (error.response) {
       console.error(error.response.status, error.response.data);
       res.status(error.response.status).json(error.response.data);
@@ -45,6 +44,6 @@ export default async function (req, res) {
 }
 
 function generatePrompt(story) {;
-  return `Tell me a story about ${story} in danish in the style of the danish queen thyra.
-     Use a very agressive tone and very strict formulations`;
+  return `Fortæl mig en historie om ${story} på dansk fortalt som den danske vikinge dronning thyra.
+     Vær meget striks og brug præcise formuleringer på gamelt dansk`;
 }
