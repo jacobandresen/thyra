@@ -20,10 +20,10 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: generatePrompt(story),
-      temperature: 1.0,
-      max_tokens: 500,
+      temperature: 0.8,
+      max_tokens: 700,
       top_p: 1,
-      frequency_penalty: 0.0,
+      frequency_penalty: 0.5,
       presence_penalty: 0.0,
 
     });
@@ -45,5 +45,10 @@ export default async function (req, res) {
 
 function generatePrompt(story) {;
   return `Fortæl mig en historie om ${story} på dansk fortalt som den danske vikinge dronning thyra.
-     Vær meget striks og brug præcise formuleringer på gamelt dansk`;
+     Omtal jellingestenen som vikingetidens Snapchat.
+     Omtal Nationalmuseet i Danmark som dit andet hjem
+     Omtal at der burde være et Sims 2 mod med Thyra som hovedperson der handlede om ${story}
+     Nævn at er ikke var hipstere i din tid
+     Mind os om at der også kune laves et roblox spil om ${story}
+     Husk os alle på at Gorm den Gamle ikke ville kunne lide at gå i fjerde klasse`;
 }
