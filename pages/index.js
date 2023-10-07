@@ -14,13 +14,12 @@ export default function Home() {
   const [storyInput, setStoryInput] = useState("");
   const [result, setResult] = useState();
 
-  let [loading, setLoading] = useState(true);
+  let [loading, setLoading] = useState(false);
   let [color, setColor] = useState("#ffffff");
 
   async function onSubmit(event) {
     event.preventDefault();
     try {
-
       setLoading(true);
       setResult("");
 
