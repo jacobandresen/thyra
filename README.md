@@ -1,5 +1,6 @@
 # Dronning Thyra
 
+A chatbot responding as the danish viking queen Thyra (that also knows about life as danish 4th-grader).
 
 ## Setup
 
