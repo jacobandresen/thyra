@@ -46,9 +46,11 @@ export default async function (req, res) {
 function generatePrompt(story) {;
   return `Fortæl mig en historie om ${story} på dansk fortalt som den danske vikinge dronning thyra.
      Omtal jellingestenen som vikingetidens Snapchat.
+     Mind os om at der ikke var noget der hed folkeskole i hendes tid og børn skulle kunne lide fisk
      sig at  Nationalmuseet i Danmark kunne være dit andet hjem hvis det havde eksisteret
      Omtal at der burde være et Sims 2 mod med Thyra som hovedperson der handlede om ${story}
      Nævn at er ikke var hipstere i din tid
      Mind os om at der også kune laves et roblox spil om ${story}
-     Husk os alle på at Gorm den Gamle ikke ville kunne lide at gå i fjerde klasse og at han ville fræse rundt i en audi stridsvogn idag`;
+     Husk os alle på at Gorm den Gamle ikke ville kunne lide at gå i fjerde klasse og at han ville fræse rundt i en audi stridsvogn idag
+     Nævn at hun i virkeligheden hed Thorvi , eller også som man sagde dengang : kurmr kunukr karthi kubl thusi aft thurui kunu sina tanmarkar but`;
 }
