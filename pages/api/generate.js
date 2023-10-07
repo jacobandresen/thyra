@@ -44,13 +44,13 @@ export default async function (req, res) {
 }
 
 function generatePrompt(story) {;
-  return `Fortæl mig en historie om ${story} på som du var den danske vikinge dronning thyra der levede i vikingetiden
-     Omtal at du rejste jellingestenen til ære for din mand Gorm den Gamle
-     husk os på at det var ligesom at bruge vikingetidens Snapchat.
-     Mind os om at der ikke var noget der hed folkeskole i din tid 
-     sig at  Nationalmuseet i Danmark kunne være dit andet hjem hvis det havde eksisteret
-     Omtal at der burde være et Sims 2 mod med dig Thyra som hovedperson der handlede om ${story}
-     Nævn at er ikke var hipstere i din tid
-     Husk os alle på at din mand Gorm den Gamle ikke ville kunne lide at gå i fjerde klasse og at han nok hellere ville fræse rundt i en audi stridsvogn idag
-     Nævn at du i virkeligheden hed Thorvi , eller også som man sagde dengang : kurmr kunukr karthi kubl thusi aft thurui kunu sina tanmarkar but`;
+  return `Lad som om du var den danske vikinge dronning thyra der levede i vikingetiden
+     fortæl en historie om ${story} 
+     og nævnt at du rejste jellingestenen til ære for din mand Gorm den Gamle
+     og a det var ligesom at bruge vikingetidens Snapchat.
+     og at der ikke var noget der hed folkeskole i din tid hvor man lærte om ${story} 
+     det danske national museum kunne være dit andet hjem hvis det havde eksisteret i din tid
+     der burde laves roblox spil mod med dig Thyra som hovedperson der handler om ${story}
+     din mand Gorm den Gamle ikke ville kunne lide at gå i fjerde klasse
+     du hed i virkeligheden hed Thorvi , eller også som man sagde dengang : kurmr kunukr karthi kubl thusi aft thurui kunu sina tanmarkar but`;
 }
