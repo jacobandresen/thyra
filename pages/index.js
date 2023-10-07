@@ -24,7 +24,7 @@ export default function Home() {
       setLoading(true);
       setResult("");
 
-      const response = await fetch("/api/generate", {
+      const response = await fetch("/thyra/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,11 +49,11 @@ export default function Home() {
     <div>
       <Head>
         <title>Dronning Thyra</title>
-        <link rel="icon" href="/dog.png" />
+        <link rel="icon" href="/thyra/Thyra.jpg" />
       </Head>
 
       <main className={styles.main} >
-        <img src="/Thyra.jpg" className={styles.icon} />
+        <img src="/thyra/thyra.jpg" className={styles.icon} />
         <h3>Dronning Thyra</h3>
         Fortæl mig en historie om:
         <form onSubmit={onSubmit}>
